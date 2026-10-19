@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #f0f4f9; /* Warna latar abu-biru muda yang bersih */
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #1e293b;
+}
+
+hr {
+    border: 0;
+    background: #e2e8f0;
+    height: 1px;
+    margin: 20px 0;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    color: #0f172a;
+    padding: 25px 0 15px 0;
+}
+
+header .judul {
+    font-size: 20pt;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #033172; /* Warna biru navy untuk judul utama */
+}
+
+header .deskripsi {
+    font-size: 11pt;
+    color: #64748b;
+}
+
+/* WRAPPER UTAMA */
+.wrap {
+    width: 1200px;
+    margin: 10px auto 40px auto;
+}
+
+/* NAVBAR BIRU MODERN */
+nav.menu ul {
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin: 0 0 25px 0;
+    background: linear-gradient(90deg, #033172 0%, #2563eb 100%); /* Gradien Biru Navy ke Royal Blue */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(3, 49, 114, 0.25);
+}
+
+nav.menu ul li {
+    margin: 0;
+    float: left;
+}
+
+nav.menu ul a {
+    padding: 18px 28px;
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+nav.menu ul a:hover {
+    background: rgba(255, 255, 255, 0.15); /* Efek sorot transparan saat kursor mengarah ke menu */
+    text-decoration: none;
+}
+
+/* KONTEN UTAMA (KIRI) */
+.conteudo {
+    float: left;
+    width: 880px;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e2e8f0;
+    border-top: 4px solid #2563eb; /* Akses garis biru di atas box */
+}
+
+.conteudo h2 {
+    font-size: 22px;
+    color: #0f172a;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.conteudo p {
+    line-height: 1.7;
+    color: #475569;
+    font-size: 14px;
+}
+
+/* SIDEBAR WIDGET (KANAN) */
+.sidebar {
+    float: right;
+    width: 280px;
+}
+
+.sidebar .widget {
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e2e8f0;
+    border-top: 4px solid #033172; /* Akses garis navy di atas widget */
+    font-size: 14px;
+}
+
+.sidebar .widget h3 {
+    margin-top: 0;
+    color: #033172;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.sidebar .widget p {
+    color: #64748b;
+    line-height: 1.5;
+    font-size: 13px;
+    margin: 0;
+}
+
+/* CLEARFIX (Agar layout float tidak berantakan) */
+.wrap::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* RESPONSIVE MEDIA QUERY */
+@media screen and (max-width: 1250px) {
+    .wrap {
+        width: 92%;
+    }
+
+    .conteudo {
+        width: 100%;
+        float: none;
+        margin-bottom: 20px;
+    }
+
+    .sidebar {
+        width: 100%;
+        float: none;
+    }
+
+    nav.menu ul li {
+        float: none;
+    }
+
+    nav.menu ul a {
+        padding: 12px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
